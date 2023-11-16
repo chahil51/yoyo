@@ -1,0 +1,538 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yo-Yo Test Interface</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Yo-Yo Test Interface</h1>
+        <div class="button-container">
+            <button id="connect">Connect to NRF UART</button>
+            <button id="connectHR">Connect to Heart Rate Monitor</button>
+            </br>
+            <button id="buzz">Buzz pod</button>
+            <button id="start">Start Yo-Yo Test</button>
+            <div id="atomstatus">Atom Disconnected</div>
+            <div id="heartRateStatus">Heart Rate Monitor Disconnected</div>
+        </div>
+        <div id="level">Level: --</div>
+        <div id="setTime">Set Time: --</div>
+        
+        <div id="heartRate">Heart Rate: -- BPM</div>
+        </br>
+
+    </div>
+    <div id="app">
+        <header>
+            <h1>Yo-Yo Test</h1>
+        </header>
+        <main>
+            <table id="resultsTable">
+                <thead>
+                    <tr>
+                        <th>Level</th>
+                        <th>Set Time (ms)</th>
+                        <th>Got Time (ms)</th>
+                        <th>Required Speed (m/s)</th>
+                        <th>Obtained Speed (m/s)</th>
+                        <th>Recovery Rate</th>
+                    </tr>
+                </thead>
+                <tbody>
+                   
+                </tbody>
+            </table>
+        </main>
+    </div>
+    <script src="app.js"></script>
+    
+
+    <script src="app.js"></script>
+</body>
+</html> -->
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yo-Yo Test Interface</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="app-header">
+            <h1>Yo-Yo Test Interface</h1>
+        </header>
+        <main class="main-content">
+            <div class="button-container">
+                <button id="connect" class="material-button">Connect to NRF UART</button>
+                <button id="connectHR" class="material-button">Connect to Heart Rate Monitor</button>
+                <button id="buzz" class="material-button">Buzz pod</button>
+                <button id="start" class="material-button">Start Yo-Yo Test</button>
+                <div id="atomstatus" class="status-indicator">
+                    <span class="material-icons">bluetooth_searching</span> Atom Disconnected
+                </div>
+                <div id="heartRateStatus" class="status-indicator">
+                    <span class="material-icons">favorite</span> Heart Rate Monitor Disconnected
+                </div>
+            </div>
+            <section class="test-info">
+                <div id="level">Level: --</div>
+                <div id="setTime">Set Time: --</div>
+                <div id="heartRate">Heart Rate: -- BPM</div>
+            </section>
+            <section class="results">
+                <table id="resultsTable" class="responsive-table">
+                 
+                </table>
+            </section>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html> -->
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yo-Yo Test Interface</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="app-header">
+            <h1>Yo-Yo Test Interface</h1>
+        </header>
+        <main class="main-content">
+            <div class="cards-container">
+                <div class="card">
+                    <span class="material-icons icon-button" id="connect">bluetooth</span>
+                    <span class="material-icons icon-status" id="atomStatus">bluetooth_disabled</span>
+                    <p>Atom</p>
+                </div>
+                <div class="card">
+                    <span class="material-icons icon-button" id="connectHR">favorite</span>
+                    <span class="material-icons icon-status" id="heartRateStatus">favorite_border</span>
+                    <p>Heart Rate</p>
+                </div>
+                <div class="card">
+                    <span class="material-icons icon-button" id="buzz">notifications</span>
+                    <p>Buzz Pod</p>
+                </div>
+                <div class="card">
+                    <span class="material-icons icon-button" id="start">play_arrow</span>
+                    <p>Start Test</p>
+                </div>
+            </div>
+            <section class="test-info">
+                <div id="level">Level: --</div>
+                <div id="setTime">Set Time: --</div>
+                <div id="heartRate">Heart Rate: -- BPM</div>
+            </section>
+            <section class="results">
+                <table id="resultsTable" class="responsive-table">
+            
+                </table>
+            </section>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html> -->
+
+<!-- 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yo-Yo Test Interface</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <h1>Yo-Yo Test Interface</h1>
+        </header>
+        <main class="main-content">
+          
+            <div class="device-card" id="atomCard">
+                <div class="device-icon">
+                    <span class="material-icons md-48">bluetooth</span>
+                </div>
+                <div class="device-info">
+                    <h2>Atom</h2>
+                    <p>Disconnected</p>
+                </div>
+            </div>
+        
+            <div class="device-card" id="heartRateCard">
+                <div class="device-icon">
+                    <span class="material-icons md-48">favorite</span>
+                </div>
+                <div class="device-info">
+                    <h2>Heart Rate</h2>
+                    <p>Disconnected</p>
+                </div>
+            </div>
+            
+    
+            <section class="results-section">
+                <table id="resultsTable">
+                  
+                    <tr>
+                        <th>Level</th>
+                        <th>Set Time (ms)</th>
+      
+                    </tr>
+
+                </table>
+            </section>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yo-Yo Test Interface</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <h1>Yo-Yo Test Interface</h1>
+        </header>
+        <main class="main-content">
+            <div class="device-card" id="atomCard">
+                <div class="device-icon">
+                    <span class="material-icons md-48">bluetooth</span>
+                </div>
+                <div class="device-info">
+                    <h2>Atom</h2>
+                    <p id="atomStatus">Disconnected</p>
+                </div>
+                <button id="connect" class="action-button">Connect Atom</button>
+            </div>
+            
+            <div class="device-card" id="heartRateCard">
+                <div class="device-icon">
+                    <span class="material-icons md-48">favorite</span>
+                </div>
+                <div class="device-info">
+                    <h2>Heart Rate</h2>
+                    <p id="heartRateStatus">Disconnected</p>
+                </div>
+                <button id="connectHR" class="action-button">Connect HR Monitor</button>
+            </div>
+
+            <div class="status-card" id="currentStatusCard">
+                <div class="status-info">
+                    <h2>Current Status</h2>
+                    <p id="currentLevel">Level: --</p>
+                    <p id="currentTime">Set Time: -- ms</p>
+                </div>
+                <button id="start" class="action-button">Start Test</button>
+            </div>
+
+            <button id="buzzButton" class="action-button">Buzz</button>
+
+            <section class="results-section">
+                <table id="resultsTable">
+                    <thead>
+                        <tr>
+                            <th>Level</th>
+                            <th>Set Time (ms)</th>
+                            <th>Got Time (ms)</th>
+                            <th>Required Speed (m/s)</th>
+                            <th>Obtained Speed (m/s)</th>
+                            <th>Recovery Rate</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                      
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html> -->
+
+<!-- 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yo-Yo Test Interface</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <h1>Yo-Yo Test Interface</h1>
+        </header>
+        <main class="main-content">
+            <div class="cards-container">
+                <div class="device-card" id="atomCard">
+                    <div class="device-icon">
+                        <span class="material-icons md-48">bluetooth</span>
+                    </div>
+                    <div class="device-info">
+                        <h2>Atom</h2>
+                        <p id="atomStatus">Disconnected</p>
+                        <button id="connect" class="action-button">Connect Atom</button>
+                    </div>
+                </div>
+
+                <div class="device-card" id="heartRateCard">
+                    <div class="device-icon">
+                        <span class="material-icons md-48">favorite</span>
+                    </div>
+                    <div class="device-info">
+                        <h2>Heart Rate</h2>
+                        <p id="heartRateStatus">Disconnected</p>
+                        <button id="connectHR" class="action-button">Connect HR Monitor</button>
+                    </div>
+                </div>
+                
+                <div class="status-card" id="currentStatusCard">
+                    <div class="status-info">
+                        <h2>Current Status</h2>
+                        <p id="currentLevel">Level: --</p>
+                        <p id="currentTime">Set Time: -- ms</p>
+                        <button id="start" class="action-button">Start Test</button>
+                    </div>
+                </div>
+
+                <div class="buzz-container">
+                    <button id="buzzButton" class="buzz-button">Buzz</button>
+                </div>
+            </div>
+
+            <section class="results-section">
+                <table id="resultsTable">
+                    <thead>
+                        <tr>
+                            <th>Level</th>
+                            <th>Set Time (ms)</th>
+                            <th>Got Time (ms)</th>
+                            <th>Required Speed (m/s)</th>
+                            <th>Obtained Speed (m/s)</th>
+                            <th>Recovery Rate</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                       
+             </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html> --> 
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yo-Yo Test Interface</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <h1>Yo-Yo Test Interface</h1>
+        </header>
+        <main class="main-content">
+       
+            <div id="atomControl" class="control-item">
+                <span class="material-icons icon">bluetooth</span>
+                <h2>Atom</h2>
+                <p id="atomStatus">Disconnected</p>
+                <button id="connect" class="btn-connect">Connect Atom</button>
+            </div>
+            <div id="heartRateControl" class="control-item">
+                <span class="material-icons icon">favorite</span>
+                <h2>Heart Rate</h2>
+                <p id="heartRateStatus">Disconnected</p>
+                <button id="connectHR" class="btn-connect">Connect HR Monitor</button>
+            </div>
+          
+            <div id="currentStatus" class="control-item">
+                <h2>Current Status</h2>
+                <p id="currentLevel">Level: --</p>
+                <p id="currentTime">Set Time: -- ms</p>
+                <button id="start" class="btn-action">Start Test</button>
+                <button id="buzz" class="btn-action">Buzz</button>
+            </div>
+         
+            <div class="results-container">
+                <table id="resultsTable">
+                    <thead>
+                        <tr>
+                            <th>Level</th>
+                            <th>Set Time (ms)</th>
+                            <th>Got Time (ms)</th>
+                            <th>Required Speed (m/s)</th>
+                            <th>Obtained Speed (m/s)</th>
+                            <th>Recovery Rate</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html> -->
+
+<!-- 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yo-Yo Test Interface</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <h1>Yo-Yo Test Interface</h1>
+        </header>
+        <div class="grid-container">
+            <div class="control-item">
+                <span class="material-icons icon">bluetooth</span>
+                <h2>Atom</h2>
+                <p id="atomStatus">Disconnected</p>
+                <button id="connect" class="btn-connect">Connect Atom</button>
+            </div>
+
+            <div class="control-item">
+                <span class="material-icons icon">favorite</span>
+                <h2>Heart Rate</h2>
+                <p id="heartRateStatus">Disconnected</p>
+                <button id="connectHR" class="btn-connect">Connect HR Monitor</button>
+            </div>
+
+            <div class="control-item">
+                <h2>Current Status</h2>
+                <p id="currentLevel">Level: --</p>
+                <p id="currentTime">Set Time: -- ms</p>
+                <button id="start" class="btn-action">Start Test</button>
+            </div>
+
+            <div class="control-item">
+                <button id="buzz" class="btn-action">Buzz</button>
+            </div>
+        </div>
+
+        <div class="results-container">
+            <table id="resultsTable">
+               
+            </table>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yo-Yo Test Interface</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <h1>Yo-Yo Test Interface</h1>
+        </header>
+        <div class="grid-container">
+            <!-- Atom Card -->
+            <div class="card" id="atomCard">
+                <span class="material-icons md-48">bluetooth</span>
+                <h2>Atom</h2>
+                <p id="atomstatus">Disconnected</p>
+                <button id="connect">Connect Atom</button>
+            </div>
+            <!-- Heart Rate Card -->
+            <div class="card" id="heartRateCard">
+                <span class="material-icons md-48">favorite</span>
+                <h2>Heart Rate</h2>
+                <p id="hrstatus">Disconnected</p>
+                <p id="heartRate">💙Heart Rate: -- BPM</p>
+                <button id="connectHR">Connect HR Monitor</button>
+            </div>
+            <!-- Current Status Card -->
+            <div class="card" id="currentStatusCard">
+                <h2>Current Status</h2>
+                <p id="level">Level: --</p>
+                <p id="setTime">Set Time: -- ms</p>
+                <button id="starttest">Start Test</button>
+            </div>
+            <!-- Buzz Card -->
+            <div class="card" id="buzzCard">
+                <button id="buzz">Buzz</button>
+            </div>
+        </div>
+        <!-- Results Table -->
+        <div class="table-responsive">
+            <table id="results">
+                <thead>
+                    <tr>
+                        <th>Level</th>
+                        <th>Set Time (ms)</th>
+                        <th>Got Time (ms)</th>
+                        <th>Required Speed (m/s)</th>
+                        <th>Obtained Speed (m/s)</th>
+                        <th>Recovery Rate</th>
+                    </tr>
+                </thead>
+                <tbody>
+                   
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
